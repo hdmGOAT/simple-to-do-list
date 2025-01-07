@@ -3,11 +3,13 @@ import Item from "@/components/item";
 
 const ListPage = () => {
   return (
-    <div>
-      <Item></Item>
-      <Item></Item>
-      <Item></Item>
-      <Item></Item>
+    <div className="m-2">
+      <div className="space-y-3">
+        <Item></Item>
+        <Item></Item>
+        <Item></Item>
+        <Item></Item>
+      </div>
     </div>
   );
 };

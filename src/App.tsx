@@ -7,8 +7,8 @@ import ListPage from "./pages/ListPage";
 
 function App() {
   return (
-    <div className="size-full">
-      <h1 className="justify-center">im alive</h1>
+    <div>
+      <h1 className="justify-center flex">im alive</h1>
       <ListPage />
     </div>
   );
