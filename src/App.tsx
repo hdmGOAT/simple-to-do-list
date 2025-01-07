@@ -4,13 +4,11 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>im alive</h1>
-    </>
-  )
+    <div className="size-full">
+      <h1 className="justify-center">im alive</h1>
+    </div>
+  );
 }
 
 export default App
