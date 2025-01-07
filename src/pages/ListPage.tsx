@@ -1,5 +1,5 @@
 import React from "react";
-import Item from "@/components/item";
+import Item from "@/components/Item";
 
 const ListPage = () => {
   return (
@@ -15,3 +15,11 @@ const ListPage = () => {
 };
 
 export default ListPage;
+
+/*
+D1C6AD
+BBADA0
+A1869E
+797596
+0B1D51
+*/
