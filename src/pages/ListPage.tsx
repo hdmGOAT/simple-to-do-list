@@ -2,11 +2,6 @@ import Item, { ItemProps } from "@/components/Item";
 import { supabase } from "@/createClient";
 import { useEffect, useState } from "react";
 
-const testArray: ItemProps[] = [
-  { title: "what", body: "test" },
-  { title: "tst", body: "safd" },
-];
-
 const ListPage = () => {
   const [listItems, setListItems] = useState<ItemProps[]>();
 
