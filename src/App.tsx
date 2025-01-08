@@ -10,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "./components/ui/card";
+import { Textarea } from "./components/ui/textarea";
 
 function App() {
   const [isCardOpen, setCardOpen] = useState<Boolean>(false);
@@ -45,17 +46,14 @@ function App() {
               </div>
             </CardHeader>
             <CardContent>
-              asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
-              asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
-              asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
-              asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
-              asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
-              asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
-              asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
-              asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
-              asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
+              <div className="space-y-5">
+                <Textarea placeholder="Type your Title here. " />
+                <Textarea placeholder="Type your body here. " className="h-7" />
+              </div>
             </CardContent>
-            <CardFooter>asdfasf</CardFooter>
+            <CardFooter>
+              <Button>Submit</Button>
+            </CardFooter>
           </Card>
         </div>
       )}
