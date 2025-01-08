@@ -1,14 +1,17 @@
-import React from "react";
-import Item from "@/components/Item";
+import Item, { ItemProps } from "@/components/Item";
+
+const testArray: ItemProps[] = [
+  { title: "what", body: "test" },
+  { title: "tst", body: "safd" },
+];
 
 const ListPage = () => {
   return (
     <div className="m-2">
       <div className="space-y-3">
-        <Item></Item>
-        <Item></Item>
-        <Item></Item>
-        <Item></Item>
+        {testArray.map((item, index) => (
+          <Item body={item.body} title={item.title} />
+        ))}
       </div>
     </div>
   );
