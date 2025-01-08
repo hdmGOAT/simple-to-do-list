@@ -24,14 +24,26 @@ function App() {
       </Button>
       <ListPage />
 
-      <Card>
-        <CardHeader>
-          <CardTitle> Add something</CardTitle>
-          <CardDescription>asdlfhaskfd</CardDescription>
-        </CardHeader>
-        <CardContent>asdfasdfs</CardContent>
-        <CardFooter>asdfasf</CardFooter>
-      </Card>
+      <div className="fixed inset-0 flex items-center justify-center z-50 m-6">
+        <Card className="max-w-lg w-full bg-white shadow-xl rounded-lg">
+          <CardHeader>
+            <CardTitle>Add something</CardTitle>
+            <CardDescription>asdlfhaskfd</CardDescription>
+          </CardHeader>
+          <CardContent>
+            asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
+            asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
+            asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
+            asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
+            asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
+            asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
+            asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
+            asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
+            asdfasdfsasdfasdfsasdfasdfsasdfasdfsasdfasdfs
+          </CardContent>
+          <CardFooter>asdfasf</CardFooter>
+        </Card>
+      </div>
     </div>
   );
 }
