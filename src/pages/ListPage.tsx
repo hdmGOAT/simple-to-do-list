@@ -42,11 +42,3 @@ const ListPage = () => {
 };
 
 export default ListPage;
-
-/*
-D1C6AD
-BBADA0
-A1869E
-797596
-0B1D51
-*/
