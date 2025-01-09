@@ -11,9 +11,16 @@ import {
   CardTitle,
 } from "./components/ui/card";
 import { Textarea } from "./components/ui/textarea";
+import { ItemProps } from "./components/Item";
+import { title } from "process";
 
 function App() {
   const [isCardOpen, setCardOpen] = useState<Boolean>(false);
+  const [Input, setInput] = useState<ItemProps>({
+    title: "",
+    body: "",
+  });
+
 
   return (
     <div className="min-h-screen flex flex-col">
