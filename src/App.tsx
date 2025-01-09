@@ -1,4 +1,4 @@
-import { ReactEventHandler, useState } from "react";
+import { ChangeEvent, ReactEventHandler, useState } from "react";
 import "./App.css";
 import { Button } from "./components/ui/button";
 import ListPage from "./pages/ListPage";
@@ -12,7 +12,6 @@ import {
 } from "./components/ui/card";
 import { Textarea } from "./components/ui/textarea";
 import { ItemProps } from "./components/Item";
-import { title } from "process";
 
 function App() {
   const [isCardOpen, setCardOpen] = useState<Boolean>(false);
@@ -21,6 +20,19 @@ function App() {
     body: "",
   });
 
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { id, value } = e.target;
+    setInput((prevFormData) => ({
+      ...prevFormData,
+      [id]: value,
+    }));
+  };
+
+  const handleSubmit = async () => {
+    console.log(Input);
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -54,12 +66,21 @@ function App() {
             </CardHeader>
             <CardContent>
               <div className="space-y-5">
-                <Textarea placeholder="Type your Title here. " />
-                <Textarea placeholder="Type your body here. " className="h-7" />
+                <Textarea
+                  id="title"
+                  onChange={handleChange}
+                  placeholder="Type your Title here. "
+                />
+                <Textarea
+                  id="body"
+                  onChange={handleChange}
+                  placeholder="Type your body here. "
+                  className="h-7"
+                />
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Submit</Button>
+              <Button onClick={handleSubmit}>Submit</Button>
             </CardFooter>
           </Card>
         </div>
