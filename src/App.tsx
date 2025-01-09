@@ -12,10 +12,11 @@ import {
 } from "./components/ui/card";
 import { Textarea } from "./components/ui/textarea";
 import { ItemProps } from "./components/Item";
+import { supabase } from "./createClient";
 
 function App() {
   const [isCardOpen, setCardOpen] = useState<Boolean>(false);
-  const [Input, setInput] = useState<ItemProps>({
+  const [input, setInput] = useState<ItemProps>({
     title: "",
     body: "",
   });
@@ -31,7 +32,19 @@ function App() {
   };
 
   const handleSubmit = async () => {
-    console.log(Input);
+    console.log(input);
+    const { title, body } = input;
+
+    const { data, error } = await supabase
+      .from("todo")
+      .insert([{ title: title, body: body }])
+      .select();
+
+    if (error) {
+      console.error("error inserting todo item: ", error.message);
+    }
+
+    alert("uploaded!");
   };
 
   return (
